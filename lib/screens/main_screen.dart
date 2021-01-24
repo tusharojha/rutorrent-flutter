@@ -321,7 +321,10 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(Icons.home),
               label: 'Home',
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.rss_feed), label: 'Feeds')
+            BottomNavigationBarItem(
+              icon: Icon(Icons.rss_feed),
+              label: 'Feeds',
+            ),
           ],
           onTap: (index) {
             setState(() => _currentIndex = index);
