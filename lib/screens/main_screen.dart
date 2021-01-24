@@ -313,19 +313,17 @@ class _MainScreenState extends State<MainScreen> {
               Provider.of<Mode>(context).isDarkMode ? kGreyDT : null,
           selectedItemColor: Theme.of(context).primaryColor,
           currentIndex: _currentIndex,
+          unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title:
-                  Text('Home', style: TextStyle(fontWeight: FontWeight.bold)),
+              label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.rss_feed),
-              title: Text(
-                'Feeds',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+              label: 'Feeds',
             )
           ],
           onTap: (index) {
